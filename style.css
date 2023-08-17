@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.orange {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.half {
+    width: 100%;
+    height: 50%;
+    background-color: orange;
+    position: absolute;
+    transition: transform 1s ease-in-out;
+}
+
+.top {
+    transform-origin: bottom;
+}
+
+.bottom {
+    transform-origin: top;
+    top: 50%;
+}
+
+.orange:hover .top {
+    transform: rotate(45deg) translateY(-50%);
+}
+
+.orange:hover .bottom {
+    transform: rotate(-45deg) translateY(-50%);
+}
